@@ -4,6 +4,7 @@
 </h2>
 
 - Build for mobile and desktop
+- Check the results here: https://biacarvalhocavalieri.github.io/game-wreck-it-ralph/
 
 ## 🖊️ Autor
 
