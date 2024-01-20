@@ -1,0 +1,140 @@
+.game-container {
+    margin: 0 auto;
+    height: 100%;
+}
+.game-menu {
+    display: flex;
+    justify-content: space-evenly;  
+    align-items: center;
+
+    height: 6rem;
+    width: 100%;
+    background-color: #000;
+    border-bottom: 0.25rem solid #ffd700;
+    color: #fff
+}
+
+.game-menu_lives {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.5rem;
+}
+.game-menu_time--title,
+.game-menu_score--title {
+    color: #ff0000;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.game-menu_lives--image {
+    width: 5rem;
+}
+.game-menu_time--value,
+.game-menu_score--value,
+.game-menu_lives--value  {
+    text-align: center;
+    font-size: 2rem;
+}
+.game-panel {
+    width: 100%;
+    height: calc(100vh - 6rem);
+    padding-top: 1rem;
+    background-image: url(../images/wall.png);
+    position: relative;
+}
+.game-panel_row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game-panel_row--square {
+    height: 10rem;
+    width: 10rem;
+    background-color: rgba(255, 0, 0, 0.63);
+    border: 1px solid #000;
+    cursor: pointer;
+}
+.game-panel_row--square.enemy {
+    background-image: url(../images/ralph.png);
+    background-size: cover;
+}
+.game-result {
+    position: fixed;
+    background-color: #0000005b;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+}
+.game-result_text {
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
+    max-width: 66%;
+    text-align: center;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+.game-result_button {
+    height: 3rem;
+    padding: 0 2rem;
+    border: 0.125rem solid #000;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.game-result_button:hover {
+    background-color: #f0e9e9;
+}
+
+@media screen and (max-width: 48rem) {
+    .game-menu {
+        height: auto;
+        padding: 0 1rem 1rem;
+    }
+    .game-menu_time--title,
+    .game-menu_score--title {
+        text-align: center;
+        font-size: 0.875rem;
+        margin-top: 1rem;
+    }
+    .game-menu_time--value,
+    .game-menu_score--value,
+    .game-menu_lives--value  {
+        text-align: center;
+        font-size: 1rem;
+    }
+    .game-menu_lives--image {
+        margin: 1rem;
+        width: 3rem;
+    }
+    .game-panel {
+        padding: 3rem 2rem;
+    }
+    .game-panel_row--square {
+        max-width: 100%;
+        max-height: 8rem;
+    }
+    .game-panel_row--square.enemy {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .game-result_text {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        max-width: 80%;
+        padding: 1rem;
+    }
+    .game-result_button {
+        height: 3rem;
+        padding: 0 1rem;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wreck-it Ralph</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+<body>
+    <main class="game-container">
+        <header class="game-menu">
+            <div class="game-menu_time">
+                <h2 class="game-menu_time--title">Time Left</h2>
+                <h3 class="game-menu_time--value">01:00</h3>
+            </div>
+            <div class="game-menu_score">
+                <h1 class="game-menu_score--title">Your Score</h1>
+                <h2 class="game-menu_score--value">0</h2>
+            </div>
+            <div class="game-menu_lives">
+                <img class="game-menu_lives--image" src="./src/images/player.png"/>
+                <h3 class="game-menu_lives--value">3</h3>
+            </div>
+        </header>
+        <section class="game-panel">
+            <div class="game-panel_row">
+                <div class="game-panel_row--square enemy" id="square-1"></div>
+                <div class="game-panel_row--square" id="square-2"></div>
+                <div class="game-panel_row--square" id="square-3"></div>
+            </div>
+            <div class="game-panel_row">
+                <div class="game-panel_row--square" id="square-4"></div>
+                <div class="game-panel_row--square" id="square-5"></div>
+                <div class="game-panel_row--square" id="square-6"></div>
+            </div>
+            <div class="game-panel_row">
+                <div class="game-panel_row--square" id="square-7"></div>
+                <div class="game-panel_row--square" id="square-8"></div>
+                <div class="game-panel_row--square" id="square-9"></div>
+            </div>
+            <div class="game-result">
+                <h1 class="game-result_text">Game over</h1>
+                <button class="game-result_button">Restart</button>
+            </div>
+        </section>
+    </main>
+    <script defer src="./src/scripts/engine.js"></script>
+</body>
+</html>
